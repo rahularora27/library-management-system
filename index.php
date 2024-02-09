@@ -3,42 +3,16 @@
     <head>
         <title>Manipal Library</title>
         <link rel="icon" href="./assets/images/manipal.png">
-        <link rel="stylesheet" href="./assets/css/signup-login.css">
+        <link rel="stylesheet" href="./assets/css/index.css">
     </head>
     <body>
-
-        <!-- NAVBAR -->
-        <nav>
-            <div class="logo">
-                <img src="./assets/images/books.png" alt="Logo">
-            </div>
-            <ul class="nav-items">
-                <li><a href="./client/admin_login.php">Admin Login</a></li>
-                <li><a href="index.php">User Login</a></li>
-                <li><a href="./client/register.php">Register</a></li>
-            </ul>
-        </nav>
-        <!-- NAVBAR -->
-
-        <!-- LOGIN FORM -->
-        <div class="image-container">
-            <img src="./assets/images/Manipal Library.png" alt="Registration Image">
-        </div>
-        <div class="form-container">
-            <form action="server/login.php" method="post">
-                <label for="email">Email ID:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                
-        <div class="buttons-container">
-            <button type="submit" class="register-button">Login</button>
-            <button type="reset" class="reset-button">Reset</button>
-        </div>
-            </form>
-        </div>
-        <!-- LOGIN FORM -->
-
+    <div class="image-container">
+        <img src="assets/images/Manipal Library.png" alt="Registration Image">
+    </div>
+    <div class="items">
+    <a href="./client/admin_login.php"><p>Admin Login</p></a>
+    <a href="./client/user_login.php"><p>User Login</p></a>
+    <a href="./client/register.php"><p>Register</p></a>
+    <div>
     </body>
 </html>

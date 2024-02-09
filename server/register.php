@@ -12,7 +12,7 @@
     $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
 
     if (mysqli_query($conn, $sql)) {
-        header("Location: ../index.php");
+        header("Location: ../client/user_login.php");
         exit;
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);

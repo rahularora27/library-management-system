@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../assets/css/signup-login.css">
     </head>
     <body>
+
         <!-- NAVBAR -->
         <?php include('navbar.php'); ?>
         <!-- NAVBAR -->
@@ -16,14 +17,14 @@
         </div>
         <div class="form-container">
             <form action="../server/login.php" method="post">
-                <label for="email">Admin ID:</label>
+                <label for="email">Email ID:</label>
                 <input type="email" id="email" name="email" required>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
 
-                <input type="hidden" name="user_type" value="admin"> <!-- hidden field for input type -->
-
+                <input type="hidden" name="user_type" value="user"> <!-- hidden field for input type -->
+                
         <div class="buttons-container">
             <button type="submit" class="register-button">Login</button>
             <button type="reset" class="reset-button">Reset</button>

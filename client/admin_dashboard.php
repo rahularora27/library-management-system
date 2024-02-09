@@ -18,22 +18,22 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html>
     <head><title>Manipal Library</title>
-        <link rel="icon" href="./assets/images/manipal.png">
-        <link rel="stylesheet" href="./assets/css/dashboard.css">
+        <link rel="icon" href="../assets/images/manipal.png">
+        <link rel="stylesheet" href="../assets/css/dashboard.css">
     </head>
     <body>
         
     <!-- NAVBAR -->
     <nav>
         <div class="logo">
-            <img src="./assets/images/books.png" alt="Logo">
+            <img src="../assets/images/books.png" alt="Logo">
         </div>
         <div class="dropdown">
             <button class="dropbtn">Welcome, Admin</button>
             <div class="dropdown-content">
                 <a href="edit_admin_profile.php">Edit Profile</a>
                 <a href="change_admin_password.php">Change Password</a>
-                <a href="logout_admin.php">Logout</a>
+                <a href="../server/logout.php">Logout</a>
             </div>
         </div>
     </nav>
