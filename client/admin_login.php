@@ -2,31 +2,21 @@
 <html>
     <head>
         <title>Manipal Library</title>
-        <link rel="icon" href="./assets/images/manipal.png">
-        <link rel="stylesheet" href="./assets/css/signup-login.css">
+        <link rel="icon" href="../assets/images/manipal.png">
+        <link rel="stylesheet" href="../assets/css/signup-login.css">
     </head>
     <body>
-
         <!-- NAVBAR -->
-        <nav>
-            <div class="logo">
-                <img src="./assets/images/books.png" alt="Logo">
-            </div>
-            <ul class="nav-items">
-                <li><a href="./client/admin_login.php">Admin Login</a></li>
-                <li><a href="index.php">User Login</a></li>
-                <li><a href="./client/register.php">Register</a></li>
-            </ul>
-        </nav>
+        <?php include('navbar.php'); ?>
         <!-- NAVBAR -->
 
         <!-- LOGIN FORM -->
         <div class="image-container">
-            <img src="./assets/images/Manipal Library.png" alt="Registration Image">
+            <img src="../assets/images/Manipal Library.png" alt="Registration Image">
         </div>
         <div class="form-container">
-            <form action="server/login.php" method="post">
-                <label for="email">Email ID:</label>
+            <form action="../server/admin_login.php" method="post">
+                <label for="email">Admin ID:</label>
                 <input type="email" id="email" name="email" required>
 
                 <label for="password">Password:</label>

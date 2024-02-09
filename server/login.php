@@ -17,10 +17,10 @@
     $result = mysqli_query($conn, $sql);
     
     if (mysqli_num_rows($result) > 0) {
-        header("Location: user_dashboard.php");
+        header("Location: ../client/user_dashboard.php");
         exit;
     } else {
-        echo '<script type="text/javascript"> alert("Email or Password Incorrect"); window.location = "index.php" </script>';
+        echo '<script type="text/javascript"> alert("Email or Password Incorrect"); window.location = "../index.php" </script>';
     }
     
     mysqli_close($conn);
