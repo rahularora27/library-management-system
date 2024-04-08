@@ -16,12 +16,12 @@
 
     if ($userType == 'admin') {
         $table = 'admin';
-        $dashboard = '../client/admin_dashboard.php';
-        $redirectOnError = '../client/admin_login.php';
+        $dashboard = '../admin/dashboard.php';
+        $redirectOnError = '../admin/login.php';
     } elseif ($userType == 'user') {
         $table = 'users';
         $dashboard = '../client/user_dashboard.php';
-        $redirectOnError = '../index.php';
+        $redirectOnError = '../client/login.php';
     } else {
         die("Invalid user type");
     }

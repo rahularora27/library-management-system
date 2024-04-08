@@ -14,8 +14,8 @@
     <div class="image-container">
         <img src="../assets/images/Manipal Library.png" alt="Registration Image" class="h-80 w-80">
     </div>
-    <div class="form-container bg-gray-200 p-8 rounded">
-        <form action="../server/login.php" method="post" class="flex flex-col gap-4">
+    <div class="form-container bg-white p-8 rounded shadow-lg">
+        <form action="../server/login.php" method="post" class="flex flex-col gap-4 w-72">
             <label for="email" class="text-gray-700">Admin ID:</label>
             <input type="email" id="email" name="email" required class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500">
             
@@ -35,6 +35,7 @@
         </form>
     </div>
 </div>
+<!-- LOGIN FORM -->
 
 </body>
 </html>

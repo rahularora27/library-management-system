@@ -7,19 +7,15 @@
     <link rel="icon" href="../assets/images/manipal.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-
-<!-- NAVBAR -->
-<?php include('navbar.php'); ?>
-<!-- NAVBAR -->
+<body>
 
 <!-- LOGIN FORM -->
-<div class="flex flex-col items-center justify-center min-h-screen">
+<div class="flex items-center justify-evenly h-screen">
     <div class="image-container">
-        <img src="../assets/images/Manipal Library.png" alt="Registration Image" class="max-w-full h-auto">
+        <img src="../assets/images/Manipal Library.png" alt="Registration Image" class="h-80 w-80">
     </div>
-    <div class="form-container bg-white p-8 rounded shadow-md">
-        <form action="../server/login.php" method="post" class="flex flex-col gap-4">
+    <div class="form-container bg-white p-8 rounded shadow-lg">
+        <form action="../server/login.php" method="post" class="flex flex-col gap-4 w-72">
             <label for="email" class="text-gray-700">Email ID:</label>
             <input type="email" id="email" name="email" required class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500">
             
@@ -36,6 +32,10 @@
                     Reset
                 </button>
             </div>
+            <div class="flex gap-x-2">
+                <p>New User?</p>
+                <a href="register.php" class="text-blue-500 hover:underline">Register here</a>
+            </div>    
         </form>
     </div>
 </div>

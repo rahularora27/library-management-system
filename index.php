@@ -16,10 +16,10 @@
     </div>
 
     <div class="flex items-center justify-center space-x-2">
-        <a href="./client/admin_login.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded w-32 py-2 text-center">
+        <a href="./admin/login.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded w-32 py-2 text-center">
             Admin Login
         </a>
-        <a href="./client/user_login.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded w-32 py-2 text-center">
+        <a href="./client/login.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded w-32 py-2 text-center">
             User Login
         </a>
     </div>
