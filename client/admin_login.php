@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Manipal Library</title>
-        <link rel="icon" href="../assets/images/manipal.png">
-        <link rel="stylesheet" href="../assets/css/signup-login.css">
-    </head>
-    <body>
-        <!-- NAVBAR -->
-        <?php include('navbar.php'); ?>
-        <!-- NAVBAR -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipal Library</title>
+    <link rel="icon" href="../assets/images/manipal.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
 
-        <!-- LOGIN FORM -->
-        <div class="image-container">
-            <img src="../assets/images/Manipal Library.png" alt="Registration Image">
-        </div>
-        <div class="form-container">
-            <form action="../server/login.php" method="post">
-                <label for="email">Admin ID:</label>
-                <input type="email" id="email" name="email" required>
+<!-- LOGIN FORM -->
+<div class="flex items-center justify-evenly h-screen">
+    <div class="image-container">
+        <img src="../assets/images/Manipal Library.png" alt="Registration Image" class="h-80 w-80">
+    </div>
+    <div class="form-container bg-gray-200 p-8 rounded">
+        <form action="../server/login.php" method="post" class="flex flex-col gap-4">
+            <label for="email" class="text-gray-700">Admin ID:</label>
+            <input type="email" id="email" name="email" required class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500">
+            
+            <label for="password" class="text-gray-700">Password:</label>
+            <input type="password" id="password" name="password" required class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500">
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+            <input type="hidden" name="user_type" value="admin">
 
-                <input type="hidden" name="user_type" value="admin"> <!-- hidden field for input type -->
+            <div class="buttons-container flex justify-between">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Login
+                </button>
+                <button type="reset" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
 
-        <div class="buttons-container">
-            <button type="submit" class="register-button">Login</button>
-            <button type="reset" class="reset-button">Reset</button>
-        </div>
-            </form>
-        </div>
-        <!-- LOGIN FORM -->
-
-    </body>
+</body>
 </html>
