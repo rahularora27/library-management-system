@@ -20,7 +20,7 @@
         $redirectOnError = '../admin/login.php';
     } elseif ($userType == 'user') {
         $table = 'users';
-        $dashboard = '../client/user_dashboard.php';
+        $dashboard = '../client/dashboard.php';
         $redirectOnError = '../client/login.php';
     } else {
         die("Invalid user type");
