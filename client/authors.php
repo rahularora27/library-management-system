@@ -19,24 +19,12 @@ mysqli_close($conn);
 <html>
     <head><title>Manipal Library</title>
         <link rel="icon" href="./assets/images/manipal.png">
-        <link rel="stylesheet" href="./assets/css/user_navbar.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     </head>
     <body>
         
     <!-- NAVBAR -->
-    <nav>
-        <div class="logo">
-            <img src="./assets/images/books.png" alt="Logo">
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Welcome, <?php echo $name;?></button>
-            <div class="dropdown-content">
-                <a href="edit_admin_profile.php">Edit Profile</a>
-                <a href="change_admin_password.php">Change Password</a>
-                <a href="logout_admin.php">Logout</a>
-            </div>
-        </div>
-    </nav>
+<?php include "navbar.php"; ?>
     <!-- NAVBAR -->
     
     </body>

@@ -47,36 +47,7 @@ mysqli_close($conn);
             </p>
             <a href="books.php" class="text-blue-500 hover:text-blue-700">View Books</a>
         </div>
-
-        <div class="bg-white rounded-lg p-6 shadow-md">
-            <h2 class="text-xl font-bold mb-4">Registered Authors:</h2>
-            <p class="text-2xl font-semibold mb-4">
-                <?php
-                $conn = new mysqli("localhost", "root", "", "lms");
-                if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
-                $sql = "SELECT COUNT(*) as num_authors FROM authors";
-                $result = $conn->query($sql);
-                echo ($result->num_rows > 0) ? $result->fetch_assoc()["num_authors"] : "No authors found.";
-                $conn->close();
-                ?>
-            </p>
-            <a href="authors.php" class="text-blue-500 hover:text-blue-700">View Authors</a>
-        </div>
-
-        <div class="bg-white rounded-lg p-6 shadow-md">
-            <h2 class="text-xl font-bold mb-4">Registered Categories:</h2>
-            <p class="text-2xl font-semibold mb-4">
-                <?php
-                $conn = new mysqli("localhost", "root", "", "lms");
-                if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
-                $sql = "SELECT COUNT(*) as num_categories FROM categories";
-                $result = $conn->query($sql);
-                echo ($result->num_rows > 0) ? $result->fetch_assoc()["num_categories"] : "No categories found.";
-                $conn->close();
-                ?>
-            </p>
-            <a href="categories.php" class="text-blue-500 hover:text-blue-700">View Categories</a>
-        </div>
+        
     </div>
 </div>
 
