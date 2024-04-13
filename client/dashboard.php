@@ -1,20 +1,3 @@
-<?php
-$conn = mysqli_connect("localhost", "root", "", "lms");
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-$user_id = 1;
-$sql = "SELECT name FROM users WHERE id = $user_id";
-$result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0) {
-    $row = mysqli_fetch_assoc($result);
-    $name = $row["name"];
-} else {
-    $name = "Unknown";
-}
-mysqli_close($conn);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>

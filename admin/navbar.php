@@ -6,8 +6,8 @@
         <div class="dropdown relative">
             <button id="dropdownBtn" class="dropbtn bg-gray-700 text-white px-4 py-2 rounded">Welcome, Admin</button>
             <div id="dropdownContent" class="dropdown-content hidden absolute bg-white shadow-md z-10">
-                <a href="edit_admin_profile.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Edit Profile</a>
-                <a href="change_admin_password.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Change Password</a>
+                <a href="editProfile.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Edit Profile</a>
+                <a href="changePassword.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Change Password</a>
                 <a href="../server/logout.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
             </div>
         </div>
