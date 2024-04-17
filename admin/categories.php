@@ -14,6 +14,33 @@
 
 <br/><br/><br/><br/>
 
+<div class="center">
+    <button id="openModalButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Open Modal</button>
+</div>
+
+<div id="myModal" class="modal hidden fixed inset-0 z-50 overflow-auto bg-gray-700 bg-opacity-75 flex justify-center items-center">
+    <div class="modal-content bg-white w-1/2 p-6 rounded-lg">
+        <div class="modal-header">
+            <span class="modal-close cursor-pointer z-50">
+                &times;
+            </span>
+        </div>
+        <div class="modal-body">
+            <div class="form-container bg-white p-8 rounded shadow-lg">
+                <form action="../server/addCategory.php" method="post" class="flex flex-col gap-4 w-72">
+                    <label for="name" class="text-gray-700">Category Name:</label>
+                    <input type="text" id="name" name="name" required class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500">
+                    <div class="buttons-container flex justify-between">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            Add
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container mx-auto">
     <?php
     $host = "localhost";
@@ -84,6 +111,27 @@
                 );
             }
         });
+    }
+</script>
+
+<script>
+    var openModalButton = document.getElementById("openModalButton");
+    var modal = document.getElementById("myModal");
+
+    var span = document.getElementsByClassName("modal-close")[0];
+
+    openModalButton.onclick = function() {
+        modal.classList.remove("hidden");
+    }
+
+    span.onclick = function() {
+        modal.classList.add("hidden");
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.classList.add("hidden");
+        }
     }
 </script>
 

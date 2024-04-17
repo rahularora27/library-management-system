@@ -10,11 +10,12 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$password = $_POST["password"];
+$name = $_POST["name"];
+$email = $_POST["email"];
 
-$sql = "UPDATE admin SET password='$password' WHERE id=1";
+$sql = "UPDATE admin SET name='$name', email='$email' WHERE id=1";
 if (mysqli_query($conn, $sql)) {
-    header("Location: change_admin_password.php");
+    header("Location: ../admin/editProfile.php");
         exit;
 } else {
     echo "Error updating profile: " . mysqli_error($conn);

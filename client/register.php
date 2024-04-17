@@ -11,7 +11,7 @@
 
 <!-- REGISTRATION FORM -->
 <div class="flex items-center justify-evenly h-screen">
-    <div class="image-container">
+    <div class="hidden md:block image-container">
         <img src="../assets/images/Manipal Library.png" alt="Registration Image" class="h-80 w-80">
     </div>
     <div class="form-container bg-white p-8 rounded shadow-lg">

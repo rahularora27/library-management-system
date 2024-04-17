@@ -14,7 +14,7 @@ $password = $_POST["password"];
 
 $sql = "UPDATE users SET password='$password' WHERE id=1";
 if (mysqli_query($conn, $sql)) {
-    header("Location: change_password.php");
+    header("Location: ../client/changePassword.php");
         exit;
 } else {
     echo "Error updating profile: " . mysqli_error($conn);
