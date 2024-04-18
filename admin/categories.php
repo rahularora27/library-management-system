@@ -12,10 +12,8 @@
 <?php include "navbar.php"; ?>
 <!-- NAVBAR -->
 
-<br/><br/><br/><br/>
-
 <div class="center">
-    <button id="openModalButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Open Modal</button>
+    <button id="openModalButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Add a new Category</button>
 </div>
 
 <div id="myModal" class="modal hidden fixed inset-0 z-50 overflow-auto bg-gray-700 bg-opacity-75 flex justify-center items-center">
@@ -65,7 +63,6 @@
     <table class="w-full border-collapse border border-gray-200">
         <thead>
         <tr class="bg-green-500 text-white">
-            <th class="p-4 text-left">ID</th>
             <th class="p-4 text-left">Category Name</th>
             <th class="p-4 text-left">Number of Books</th>
             <th class="p-4 text-left">Actions</th>
@@ -74,7 +71,6 @@
         <tbody>
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <tr class="border-b border-gray-200">
-                <td class="p-4"><?php echo $row["id"]; ?></td>
                 <td class="p-4"><?php echo $row["name"]; ?></td>
                 <td class="p-4"><?php echo $row["num_books"]; ?></td>
                 <td class="p-4">
@@ -114,26 +110,7 @@
     }
 </script>
 
-<script>
-    var openModalButton = document.getElementById("openModalButton");
-    var modal = document.getElementById("myModal");
-
-    var span = document.getElementsByClassName("modal-close")[0];
-
-    openModalButton.onclick = function() {
-        modal.classList.remove("hidden");
-    }
-
-    span.onclick = function() {
-        modal.classList.add("hidden");
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.classList.add("hidden");
-        }
-    }
-</script>
+<script src="../utils/Modal.js"></script>
 
 </body>
 </html>
